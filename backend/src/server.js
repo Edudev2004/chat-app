@@ -9,6 +9,10 @@ app.use(cors());
 const server = http.createServer(app);
 const io = new Server(server, { cors: { origin: '*' } });
 
+app.get('/', (req, res) => {
+    res.send('Backend corriendo OK')
+})
+
 // Conectar a MongoDB
 mongoose.connect('mongodb://127.0.0.1:27017/chat-mvp')
     .then(() => console.log('MongoDB conectado'))

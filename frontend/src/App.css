@@ -1,7 +1,115 @@
-.my-message {
-  background-color: #d1e7dd;
-  padding: 5px;
+.app {
+  max-width: 600px;
+  margin: 40px auto;
+  background: rgb(49, 47, 47);
+  padding: 15px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.login {
+  text-align: center;
+  color: white;
+}
+
+.login input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 12px;
+  font-size: 1rem;
   border-radius: 5px;
-  margin-bottom: 5px;
-  display: inline-block;
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: white;
+  flex-wrap: wrap;
+}
+
+.messages {
+  height: 300px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Mensajes de otros */
+.message {
+  max-width: 70%;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: #a57611;
+  align-self: flex-start;
+  color: white;
+  word-wrap: break-word;
+}
+
+/* Tus mensajes */
+.me {
+  max-width: 70%;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: #4c6f0b;
+  color: rgb(255, 255, 255);
+  text-align: right;
+  align-self: flex-end;
+  word-wrap: break-word;
+}
+
+.input-area {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 5px;
+  min-width: 120px;
+}
+
+.input-area button {
+  padding: 8px 12px;
+  background: #4c6f0b;
+  border: none;
+  cursor: pointer;
+  color: white;
+  min-width: 80px;
+}
+
+.input-area button:hover{
+  background: #2e7a21;
+}
+
+@media (max-width: 500px) {
+  .app {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .messages {
+    height: 250px;
+  }
+
+  .chat-header h3 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+
+  .input-area input, .input-area button {
+    font-size: 0.9rem;
+    padding: 6px 8px;
+  }
+
+  .message, .me {
+    max-width: 85%;
+    font-size: 0.9rem;
+  }
 }
